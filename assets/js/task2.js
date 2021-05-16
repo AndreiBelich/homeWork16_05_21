@@ -54,7 +54,7 @@ function createDeleteButton(){
 }
 
 function createInput(startValue){
-  return createElement("input", {
+  const input = createElement("input", {
     classNames: ["input"],
     attributes: {
       value: startValue || ""
@@ -64,6 +64,8 @@ function createInput(startValue){
       keyup: keyupHandler
     }
   });
+  input.dataset.saveValue = input.value;
+  return input;
 }
 /*Creations finish*/
 
@@ -75,6 +77,12 @@ function focusHandler({target}){
 function keyupHandler({target, code}){
   if(code.toLowerCase() === "enter"){
     target.classList.remove("input-in-focus");
+    target.dataset.saveValue = target.value;
+    target.blur();
+  }
+  if(code.toLowerCase() === "escape"){
+    target.classList.remove("input-in-focus");
+    target.value = target.dataset.saveValue;
     target.blur();
   }
 }
