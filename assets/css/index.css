@@ -1,3 +1,31 @@
 *{
   box-sizing: border-box;
 }
+
+.accordion{
+  width: 750px;
+  margin: 0 auto;
+}
+
+.content{
+  margin: 15px 0;
+}
+
+.sub-list-item{
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.list-item{
+  padding: 15px;
+  background-color: orange;
+  color: white;
+}
+
+.list-item + .list-item{
+  margin-top: 15px;
+}
+
+.hidden{
+  display: none;
+}
