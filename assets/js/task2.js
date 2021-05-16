@@ -19,7 +19,7 @@ mainForm.addEventListener("submit", (event)=> {
 });
 
 
-
+/*Creations start*/
 function createRow(name, email){
   return createElement("tr", {
       classNames: ["table-row"]
@@ -65,7 +65,9 @@ function createInput(startValue){
     }
   });
 }
+/*Creations finish*/
 
+/*Handlers start*/
 function focusHandler({target}){
   target.classList.add("input-in-focus");
 }
@@ -76,5 +78,4 @@ function keyupHandler({target, code}){
     target.blur();
   }
 }
-
-////////////////////////////////////////////////////////////////////////
+/*Handlers finish*/
