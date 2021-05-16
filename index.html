@@ -6,45 +6,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="./assets/css/task1.css">
+  <link rel="stylesheet" href="./assets/css/task2.css">
   <title>Accordion</title>
 </head>
 <body>
   <!--Start task 1-->
-  <h2>Задание 1</h2>
-  <ul class="accordion">
-    <li class="list-item">
-      Item 1
-      <div class="content hidden"> 10  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum illo ducimus non ad provident possimus quo saepe iusto voluptas architecto!</div>
-    </li>
-    <li class="list-item">
-      Item 2
-      <ul class="content hidden">
-        <li class="sub-list-item">Item 1</li>
-        <li class="sub-list-item">Item 2</li>
-        <li class="sub-list-item">Item 3</li>
-        <li class="sub-list-item">Item 4</li>
-        <li class="sub-list-item">Item 5</li>
-      </ul>
-    </li>
-    <li class="list-item">
-      Item 3
-      <div  class="content hidden">
-        <p>Paragraph 1 with some content</p>
-        <p>Paragraph 2 with some content</p>
-        <p>Paragraph 3 with some content</p>
-        <p>Paragraph 4 with some content</p>
-      </div>
-    </li>
-    <li class="list-item">
-      Item 4
-      <div  class="content hidden">40   Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum illo ducimus non ad provident possimus quo saepe iusto voluptas architecto!</div>
-    </li>
-    <li class="list-item">
-      Item 5
-      <div  class="content hidden">50   Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum illo ducimus non ad provident possimus quo saepe iusto voluptas architecto!</div>
-    </li>
-  </ul>
+  <article class="wrapper">
+    <h2 class="question-title">Задание 1</h2>
+    <div class="task">
+      <p>
+        1.Есть список. В каждом пункте есть подпункты, которые изначально скрыты.
+        Для выполнения задания можно использовать только один обработчик.
+      </p>
+      <p>
+        1.1. Реализовать сворачивание/разворачивание подпунктов при клике.
+      </p>
+      <p>
+        1.2 Сделайте так, чтобы при разворачивании одного подпункта сворачивались все остальные.
+      </p>
+    </div>
+    <ul class="accordion">
+      <li class="list-item">
+        Item 1
+        <div class="content hidden"> 10  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum illo ducimus non ad provident possimus quo saepe iusto voluptas architecto!</div>
+      </li>
+      <li class="list-item">
+        Item 2
+        <ul class="content hidden">
+          <li class="sub-list-item">Item 1</li>
+          <li class="sub-list-item">Item 2</li>
+          <li class="sub-list-item">Item 3</li>
+          <li class="sub-list-item">Item 4</li>
+          <li class="sub-list-item">Item 5</li>
+        </ul>
+      </li>
+      <li class="list-item">
+        Item 3
+        <div  class="content hidden">
+          <p>Paragraph 1 with some content</p>
+          <p>Paragraph 2 with some content</p>
+          <p>Paragraph 3 with some content</p>
+          <p>Paragraph 4 with some content</p>
+        </div>
+      </li>
+      <li class="list-item">
+        Item 4
+        <div  class="content hidden">40   Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum illo ducimus non ad provident possimus quo saepe iusto voluptas architecto!</div>
+      </li>
+      <li class="list-item">
+        Item 5
+        <div  class="content hidden">50   Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum illo ducimus non ad provident possimus quo saepe iusto voluptas architecto!</div>
+      </li>
+    </ul>
+  </article>
+  
   <!--Finish task 1-->
+
+  <!--Start task 2-->
+  <article class="wrapper">
+    <h2 class="question-title">Задание 2</h2>
+    <div class="task">
+      <p>
+        2. Дана таблица с юзерами с колонками Name, Email, Delete.
+      </p>
+      <p>
+        2.1. При нажатии на кнопку Delete запись из таблицы должна удаляться.
+      </p>
+      <p>
+        2.2. При нажатии на запись в колонках Name или Email должен появляться input на месте текста, в котором его можно редактировать.
+        При нажатии клавиши Enter в инпуте изменения сохраняются.
+      </p>
+      <p>
+        2.3.  Создать два текстовых поля под таблицей, в которые можно вводить Name и Email и кнопку, которая добавит запись в таблицу.
+      </p>
+    </div>
+    <table class="main-table">
+      <caption>Таблица пользователей</caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <h3 class="form-caption">Форма для добавления пользователей</h3>
+    <form class="add-form">
+      <label>
+        <span class="label-text">Enter your name</span>
+        <input name="userName" type="text" placeholder="Input your name" required>
+      </label>
+      <label>
+        <span class="label-text">Enter your email</span>
+        <input name="userEmail" type="email" placeholder="Enter your email" required>
+      </label>
+      <button type="submit" name="addButton" class="add-button">Add user</button>
+    </form>
+  </article>
+  <footer>
+    <div>Footer</div>
+  </footer>
+  <!--Finish task 2-->
+  <script src="./assets/js/utils.js"></script>
   <script src="./assets/js/task1.js"></script>
+  <script src="./assets/js/task2.js"></script>
 </body>
 </html>
